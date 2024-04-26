@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jacquard+12+Charted&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    min-width:100vw;
+    min-height:100vh;
+   color:rgb(0, 0, 0);
+
+}
+.side-bar{
+    background-color: black;
+    width:300px;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    overflow-y:auto ;
+    transition: 0.6s ease;
+    transition-property: left;
+    left:-300px;
+}
+.active{
+    left:0;
+}
+header .img{
+    width:100px;
+    height:100px;
+    overflow: hidden;
+    
+    
+}
+header .img img{
+    border-radius: 50%;
+    height: 100px;
+    
+}
+header{
+    background-color: #33363a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:12px ;
+}
+.close-btn{
+    position:absolute;
+    font-size: 23px;
+    top:0;
+    left:275px;
+}
+header h3{
+    font-size:23px;
+    padding-bottom: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+.menu{
+    width:100%;
+    /* background:red; */
+    margin-top:30px;
+}
+.menu .item{
+    cursor: pointer;
+}
+.menu .item a ion-icon{
+    font-size: 18px;
+
+}
+.menu .item a {
+    color:rgb(255, 250, 250);
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    line-height: 60px;
+    padding-left: 20px;
+}
+.menu .item a:hover{
+    background-color: #33363a;
+    padding-left: 25px;
+}
+.item a .dropdown{
+    margin-left:auto;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+.item .sub-menu{
+    background: #262627;
+    transition: height 0.35s ease-in-out;
+    overflow: hidden;
+}
+.item .sub-menu a{
+    padding-left:20px;
+}
+.item .sub-menu:not(.active){
+    display: none;
+}
+.menu-btn{
+    position:absolute;
+    font-size:35px;
+    cursor: pointer;
+    margin: 25px;
+}
+.rotate{
+    transform: rotate(90deg);
+}
